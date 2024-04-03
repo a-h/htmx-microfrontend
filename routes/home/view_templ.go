@@ -23,7 +23,7 @@ func View() templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<h1>Home</h1><div class=\"placeholder\" hx-trigger=\"load delay:500ms\" hx-get=\"/result?name=apple\" hx-swap=\"outerHTML\">Loading...</div><div class=\"placeholder\" hx-trigger=\"load delay:1s\" hx-get=\"/result?name=banana\" hx-swap=\"outerHTML\">Loading...</div>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<h1>Home</h1><div hx-ext=\"sse\" sse-connect=\"/quoteevents\" sse-swap=\"quote\" hx-swap=\"beforeend\">Contents of this box will be updated in real time with every SSE message received from the chatroom.</div>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

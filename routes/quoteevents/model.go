@@ -1,4 +1,4 @@
-package result
+package quoteevents
 
 type Model struct {
 	Name string

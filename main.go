@@ -5,7 +5,7 @@ import (
 	"net/http"
 
 	"github.com/a-h/htmx-microfrontend/routes/home"
-	"github.com/a-h/htmx-microfrontend/routes/result"
+	"github.com/a-h/htmx-microfrontend/routes/quoteevents"
 )
 
 func main() {
@@ -14,8 +14,9 @@ func main() {
 	homeHandler := home.NewHandler()
 	mux.Handle("/", homeHandler)
 
-	resultHandler := result.NewHandler()
-	mux.Handle("/result", resultHandler)
+	quoteeventsHandler := quoteevents.NewHandler()
+	mux.Handle("/quoteevents", quoteeventsHandler)
+	mux.Handle("/quoteevents/", quoteeventsHandler)
 
 	mux.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
 
