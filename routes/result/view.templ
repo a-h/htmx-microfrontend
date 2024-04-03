@@ -1,0 +1,8 @@
+package result
+
+templ View(m *Model) {
+	<div class="alert">
+		<h1>{ m.Name }</h1>
+		<h2>{ displayCost(m.Cost) }</h2>
+	</div>
+}

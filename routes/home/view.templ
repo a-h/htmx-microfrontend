@@ -1,0 +1,11 @@
+package home
+
+templ View() {
+	<h1>Home</h1>
+	<div class="placeholder" hx-trigger="load delay:500ms" hx-get="/result?name=apple" hx-swap="outerHTML">
+		Loading...
+	</div>
+	<div class="placeholder" hx-trigger="load delay:1s" hx-get="/result?name=banana" hx-swap="outerHTML">
+		Loading...
+	</div>
+}
